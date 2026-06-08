@@ -168,7 +168,7 @@ export default function WalletPage() {
                         : 'border-border text-muted-foreground hover:text-foreground hover:border-border/60'
                     )}
                   >
-                    ${a.toLocaleString()}
+                    ${a.toLocaleString('en-US')}
                   </button>
                 ))}
               </div>

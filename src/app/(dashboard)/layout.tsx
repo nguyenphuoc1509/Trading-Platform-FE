@@ -10,6 +10,7 @@ import { useAuthStore } from '@/store/auth.store';
 
 const NAV = [
   { href: '/dashboard',           icon: LayoutGrid,    label: 'Markets'   },
+  { href: '/dashboard/charts',    icon: BarChart2,     label: 'Charts'    },
   { href: '/dashboard/portfolio', icon: Briefcase,     label: 'Portfolio' },
   { href: '/dashboard/wallet',    icon: Wallet,        label: 'Wallet'    },
   { href: '/dashboard/orders',    icon: ClipboardList, label: 'Orders'    },
