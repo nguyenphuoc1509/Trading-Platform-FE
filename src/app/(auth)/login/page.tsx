@@ -49,7 +49,7 @@ export default function LoginPage() {
     confirmPassword: '',
   });
 
-  const redirectTo = searchParams.get('from') ?? '/dashboard';
+  const redirectTo = searchParams.get('from') ?? '/';
 
   const setField = (key: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement>) => {
     setErrorMsg('');
