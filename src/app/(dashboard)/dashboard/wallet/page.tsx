@@ -250,7 +250,7 @@ export default function WalletPage() {
                   </div>
                   <div className="text-right">
                     <p className={cn('text-sm font-mono font-medium', TX_TYPE_COLOR[tx.type])}>
-                      {['DEPOSIT','SELL_ASSET'].includes(tx.type) ? '+' : '-'}${fmt(tx.amount)}
+                     {fmt(tx.amount)}$
                     </p>
                     <div className="flex items-center justify-end gap-1.5 mt-0.5">
                       <span className={cn('text-[10px] font-medium border rounded-full px-1.5 py-px', TX_STATUS_STYLE[tx.status])}>

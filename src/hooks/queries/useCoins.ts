@@ -18,11 +18,26 @@ export function useCoins(page = 1) {
   });
 }
 
-export function useKlines(coinId: string, interval: KlineInterval = '1h', limit = 200) {
+export function useKlines(
+  coinId: string,
+  interval: KlineInterval = '1h',
+  limit = 200
+) {
   return useQuery({
     queryKey: coinKeys.klines(coinId, interval),
-    queryFn: () => coinsApi.klines(coinId, interval, limit).then((r) => r.data),
-    staleTime: Infinity, // realtime updates come via WebSocket
+    queryFn: async () => {
+      const response = await coinsApi.klines(
+        coinId,
+        interval,
+        limit
+      );
+
+      console.log('API RESPONSE', response);
+      console.log('API DATA', response.data);
+
+      return response.data;
+    },
+    staleTime: Infinity,
     enabled: !!coinId,
   });
 }
